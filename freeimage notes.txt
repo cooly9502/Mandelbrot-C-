@@ -1,0 +1,20 @@
+#include "FreeImage.h"
+
+#define imgheight 500
+#define imgwidth
+#define BPP 24
+
+//after main
+FreeImage_Initialise();
+FIBITMAP * bitmap = FreeImage_Allocate(imgSize, imgSize, BPP);
+RGBQUAD color;
+
+
+color.rgbRed = num 0-255
+etc
+FreeImage_SetPixelColor(bitmap, x, y, &color);
+
+if (FreeImage_Save(FIF_PNG, bitmap, "output.png", 0)){cout<<"Success!"<<endl;}
+FreeImage_DeInitialise();
+
+g++ main.cpp -o main -lfreeimage
